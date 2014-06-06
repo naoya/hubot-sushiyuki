@@ -1,10 +1,9 @@
 # Description:
 #   Sushiyuki
 #
-# Configuration:
-#
 # Commands:
-#   hubot sushi me <word> - Sushiyuki
+#   hubot sushi list - show emotions list
+#   hubot sushi me <emotion> - incoming sushiyuki
 #
 # Author:
 #   naoya
