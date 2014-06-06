@@ -67,7 +67,7 @@ module.exports = (robot) ->
     msg.send sushiyuki.sushiMe("sneak")
 
   robot.respond /sushi list/i, (msg) ->
-    msg.send sushiyuki.emotions().join "\n"
+    msg.sendPrivate sushiyuki.emotions().join "\n"
 
   robot.respond /sushi me (.*)/i, (msg) ->
     emote = msg.match[1]
