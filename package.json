@@ -1,6 +1,6 @@
 {
   "name": "hubot-sushiyuki",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Sushiyuki meets hubot",
   "main": "index.coffee",
   "scripts": {
