@@ -1,0 +1,28 @@
+{
+  "name": "hubot-sushiyuki",
+  "version": "0.0.1",
+  "description": "Sushiyuki meets hubot",
+  "main": "index.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/naoya/hubot-sushiyuki.git"
+  },
+  "keywords": [
+    "hubot",
+    "hubot-scripts",
+    "sushiyuki"
+  ],
+  "author": "naoya",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/naoya/hubot-sushiyuki/issues"
+  },
+  "homepage": "https://github.com/naoya/hubot-sushiyuki",
+  "dependencies": {
+    "printf": "^0.2.0",
+    "underscore": "^1.6.0"
+  }
+}
