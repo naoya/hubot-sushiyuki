@@ -62,9 +62,12 @@ class Sushiyuki
 
 module.exports = (robot) ->
   sushiyuki = new Sushiyuki
-  
+
   robot.hear /寿司|鮨|スシ|🍣/, (msg) ->
     msg.send sushiyuki.sushiMe("sneak")
+
+  robot.hear /\:\+1\:/, (msg) ->
+    msg.send sushiyuki.sushiMe("love")
 
   robot.respond /sushi list/i, (msg) ->
     msg.send sushiyuki.emotions().join "\n"
@@ -72,4 +75,3 @@ module.exports = (robot) ->
   robot.respond /sushi me (.*)/i, (msg) ->
     emote = msg.match[1]
     msg.send sushiyuki.sushiMe(emote)
-
