@@ -21,6 +21,7 @@ class Sushiyuki
     angry:  7
     "no comment": 8
     cool: 9
+    kappa: 10
     help: 11
     what: 12, question: 12
     sleep: 13, sleeply: 13
