@@ -21,4 +21,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ## NOTICE: Sushiyuki images are not under MIT License.
 
+SUSHIYUKI(寿司ゆき) Copyright (c) 2014 awayuki. (CC BY-NC-ND 4.0)
+
 See also http://awayuki.net/sushiyuki/
