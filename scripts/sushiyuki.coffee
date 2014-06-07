@@ -54,7 +54,9 @@ class Sushiyuki
     "see you": 40
 
   sushiMe: (emotion) ->
-    s = printf '%02d', @sushiMap[emotion] || @sushiMap.wat
+    defaultEmotion = process.env.HUBOT_SUSHIYUKI_DEFAULT_EMOTION
+    defaultEmotion = _.sample _.keys @sushiMap if defaultEmotion is "random"
+    s = printf '%02d', @sushiMap[emotion] || @sushiMap[defaultEmotion] || @sushiMap.wat
     return "https://raw.githubusercontent.com/naoya/hubot-sushiyuki/master/sushiyuki_images/#{s}.png"
 
   emotions: ->
