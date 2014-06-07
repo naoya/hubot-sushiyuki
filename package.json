@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/naoya/hubot-sushiyuki",
   "dependencies": {
-    "printf": "^0.2.0",
     "underscore": "^1.6.0"
   }
 }

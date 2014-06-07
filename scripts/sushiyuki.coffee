@@ -7,7 +7,6 @@
 #
 # Author:
 #   naoya
-printf = require 'printf'
 _ = require 'underscore'
 
 class Sushiyuki
@@ -54,7 +53,7 @@ class Sushiyuki
     "see you": 40
 
   sushiMe: (emotion) ->
-    s = printf '%02d', @sushiMap[emotion] || @sushiMap.wat
+    s = @sushiMap[emotion] || @sushiMap.wat
     return "https://raw.githubusercontent.com/naoya/hubot-sushiyuki/master/sushiyuki_images/#{s}.png"
 
   emotions: ->
