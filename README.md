@@ -29,6 +29,20 @@ Add `hubot-sushiyuki` to `external-scripts.json`.
 > ["hubot-sushiyuki"]
 ```
 
+### Optional
+
+You can configure default emotion.
+
+```
+> export HUBOT_SUSHIYUKI_DEFAULT_EMOTION="wat"
+```
+
+Also can set random.
+
+```
+> export HUBOT_SUSHIYUKI_DEFAULT_EMOTION="random"
+```
+
 Usage
 -----
 
