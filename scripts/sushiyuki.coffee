@@ -8,7 +8,7 @@
 # Author:
 #   naoya
 printf = require 'printf'
-_ = require 'underscore'
+_      = require 'underscore'
 
 class Sushiyuki
   @baseUrl =
