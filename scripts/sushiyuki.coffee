@@ -11,6 +11,10 @@ printf = require 'printf'
 _ = require 'underscore'
 
 class Sushiyuki
+  @baseUrl =
+    "https://raw.githubusercontent.com/
+      naoya/hubot-sushiyuki/master/sushiyuki_images/"
+
   sushiMap:
     yes: 1
     no:  2
@@ -56,15 +60,17 @@ class Sushiyuki
   sushiMe: (emotion) ->
     defaultEmotion = process.env.HUBOT_SUSHIYUKI_DEFAULT_EMOTION
     defaultEmotion = _.sample _.keys @sushiMap if defaultEmotion is "random"
-    s = printf '%02d', @sushiMap[emotion] || @sushiMap[defaultEmotion] || @sushiMap.wat
-    return "https://raw.githubusercontent.com/naoya/hubot-sushiyuki/master/sushiyuki_images/#{s}.png"
+    s = printf '%02d',
+      @sushiMap[emotion] || @sushiMap[defaultEmotion] || @sushiMap.wat
+    t = (new Date()).toISOString().replace(/[^0-9]/g, "")
+    return @baseUrl + "#{s}.png?#{t}"
 
   emotions: ->
     _.keys @sushiMap
 
 module.exports = (robot) ->
   sushiyuki = new Sushiyuki
-  
+
   robot.hear /寿司|鮨|スシ|🍣/, (msg) ->
     msg.send sushiyuki.sushiMe("sneak")
 
@@ -74,4 +80,3 @@ module.exports = (robot) ->
   robot.respond /sushi me ?(.*)/i, (msg) ->
     emote = msg.match[1]
     msg.send sushiyuki.sushiMe(emote)
-
