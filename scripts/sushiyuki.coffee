@@ -11,9 +11,8 @@ printf = require 'printf'
 _      = require 'underscore'
 
 class Sushiyuki
-  @baseUrl =
-    "https://raw.githubusercontent.com/
-      naoya/hubot-sushiyuki/master/sushiyuki_images/"
+  constructor: ->
+    @baseUrl = "https://raw.githubusercontent.com/naoya/hubot-sushiyuki/master/sushiyuki_images/"
 
   sushiMap:
     yes: 1
