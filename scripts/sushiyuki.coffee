@@ -67,6 +67,17 @@ class Sushiyuki
   emotions: ->
     _.keys @sushiMap
 
+formatEmoticonList = (emoticons) ->
+  MAX = 15
+  output = ''
+  count = 1
+  for e in emoticons
+    output +=  new Array(MAX - e.length).join(' ') + e
+    if count % 4 is 0
+      output += '\n'
+    count++
+  output
+
 module.exports = (robot) ->
   sushiyuki = new Sushiyuki
 
@@ -74,15 +85,7 @@ module.exports = (robot) ->
     msg.send sushiyuki.sushiMe("sneak")
 
   robot.respond /sushi list/i, (msg) ->
-    MAX = 15
-    output = ''
-    count  = 1
-    for e in sushiyuki.emotions()
-      output +=  new Array(MAX - e.length).join(' ') + e
-      if count % 4 is 0
-        output += '\n'
-      count++
-    msg.send output
+    msg.send formatEmoticonList(sushiyuki.emotions())
 
   robot.respond /sushi me ?(.*)/i, (msg) ->
     emote = msg.match[1]
